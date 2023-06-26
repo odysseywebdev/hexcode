@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <title>Hex</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .color-input {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            width: 200px;
+            height: 40px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+        }
+
+        .input-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function changeColor() {
+            const colorInput = document.getElementById('colorInput');
+            const hexCode = colorInput.value;
+
+            document.body.style.backgroundColor = hexCode;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="colorInput" class="color-input" placeholder="Enter HEX code" oninput="changeColor()" />
+</body>
+</html>
